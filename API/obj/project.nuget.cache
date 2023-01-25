@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "vwyJxjPxllwn04H34DYkKfp1YZCSUx4nWSZ4BPqI/aKWOK0IQaoAMYYF9iqpnPnMJlE7dgJEmZRm9LmbttyMjQ==",
+  "dgSpecHash": "UvcE+jwKeAIPy5xwub8uVkLN6L4tG7SwgdtJL7oChuEOzI722Gk+N/IR0VqsetlvWn3Rx4OX+7Kiz0gvKXCwJw==",
   "success": true,
   "projectFilePath": "/home/acancar/Documents/AngularCourse/skinet/API/API.csproj",
   "expectedPackageFiles": [
+    "/home/acancar/.nuget/packages/automapper/12.0.0/automapper.12.0.0.nupkg.sha512",
+    "/home/acancar/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.0/automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
     "/home/acancar/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
+    "/home/acancar/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
     "/home/acancar/.nuget/packages/microsoft.data.sqlite.core/6.0.13/microsoft.data.sqlite.core.6.0.13.nupkg.sha512",
     "/home/acancar/.nuget/packages/microsoft.entityframeworkcore/6.0.13/microsoft.entityframeworkcore.6.0.13.nupkg.sha512",
     "/home/acancar/.nuget/packages/microsoft.entityframeworkcore.abstractions/6.0.13/microsoft.entityframeworkcore.abstractions.6.0.13.nupkg.sha512",
