@@ -12,7 +12,7 @@ import { ShopService } from './shop.service';
   styleUrls: ['./shop.component.scss'],
 })
 export class ShopComponent implements OnInit {
-  @ViewChild('search', { static: true }) searchTerm: ElementRef;
+  @ViewChild('search', { static: false }) searchTerm: ElementRef;
   products: IProduct[];
   brands: IBrand[];
   types: IPrdocutType[];
@@ -58,14 +58,15 @@ export class ShopComponent implements OnInit {
   }
 
   getTypes(): void {
-    this.shopService.getTypes().subscribe(
-      (response: IPrdocutType[]) => {
+    this.shopService.getTypes().subscribe({
+      next: (response: IPrdocutType[]) => {
         this.types = [{ id: 0, name: 'All' }, ...response];
       },
-      (error) => {
+
+      error: (error) => {
         console.log(error);
-      }
-    );
+      },
+    });
   }
 
   onBrandSelected(brandId: number): void {

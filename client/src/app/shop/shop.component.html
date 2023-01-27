@@ -1,7 +1,8 @@
-<div class="container">
+<div class="container mt-3">
   <div class="row">
     <section class="col-3">
-      <h5 class="text-warning ml-3">Sort</h5>
+      <ng-container *ngIf="types && brands">
+      <h5 class="text-warning ml-3 mt-4 mb-2">Sort</h5>
       <select
         class="custom-select mb-3"
         (change)="onSortSelected($event.target.value)"
@@ -15,6 +16,7 @@
       <ul class="list-group my-3">
         <li
           class="list-group-item"
+          style="cursor: pointer;"
           *ngFor="let brand of brands"
           [class.active]="brand.id === shopParams.brandId"
           [value]="brand.id"
@@ -28,6 +30,7 @@
       <ul class="list-group my-3">
         <li
           class="list-group-item"
+          style="cursor: pointer;"
           *ngFor="let type of types"
           [class.active]="type.id === shopParams.typeId"
           [value]="type.id"
@@ -36,6 +39,7 @@
           {{ type.name }}
         </li>
       </ul>
+    </ng-container>
     </section>
 
     <section class="col-9">
@@ -46,7 +50,7 @@
           [totalCount]="totalCount"
         ></app-paging-header>
 
-        <div class="form-inline mt-2">
+        <div *ngIf="products" class="form-inline mt-2">
           <input
             #search
             type="text"
