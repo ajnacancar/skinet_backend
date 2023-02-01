@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text.Json;
 using System.Threading.Tasks;
 using Core.Entities;
+using Core.Entities.OrderAggregate;
 using Microsoft.Extensions.Logging;
 
 namespace Infrastructure.Data
@@ -20,12 +21,7 @@ namespace Infrastructure.Data
 
                     var brands = JsonSerializer.Deserialize<List<ProductBrand>>(brandData);
 
-                    foreach (var item in brands)
-                    {
-                        context.ProductBrands.Add(item);
-                    }
-
-                    await context.SaveChangesAsync();
+                    context.ProductBrands.AddRange(brands);
                 }
 
 
@@ -34,13 +30,8 @@ namespace Infrastructure.Data
                     var typesData = File.ReadAllText("../Infrastructure/Data/SeedData/types.json");
 
                     var types = JsonSerializer.Deserialize<List<ProductType>>(typesData);
+                    context.ProductTypes.AddRange(types);
 
-                    foreach (var item in types)
-                    {
-                        context.ProductTypes.Add(item);
-                    }
-
-                    await context.SaveChangesAsync();
                 }
 
 
@@ -49,14 +40,19 @@ namespace Infrastructure.Data
                     var productsData = File.ReadAllText("../Infrastructure/Data/SeedData/products.json");
 
                     var products = JsonSerializer.Deserialize<List<Product>>(productsData);
-
-                    foreach (var item in products)
-                    {
-                        context.Products.Add(item);
-                    }
-
-                    await context.SaveChangesAsync();
+                    context.Products.AddRange(products);
                 }
+
+                 if (!context.DeliveryMethods.Any())
+                {
+                    var deliveryData = File.ReadAllText("../Infrastructure/Data/SeedData/delivery.json");
+
+                    var methods = JsonSerializer.Deserialize<List<DeliveryMethod>>(deliveryData);
+                    context.DeliveryMethods.AddRange(methods);
+                }
+
+
+                if (context.ChangeTracker.HasChanges()) await context.SaveChangesAsync();
             }
             catch (Exception ex)
             {
