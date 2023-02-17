@@ -74,7 +74,6 @@
 /home/acancar/Documents/AngularCourse/skinet/API/bin/Debug/net6.0/System.Security.Cryptography.ProtectedData.dll
 /home/acancar/Documents/AngularCourse/skinet/API/bin/Debug/net6.0/System.Security.Permissions.dll
 /home/acancar/Documents/AngularCourse/skinet/API/bin/Debug/net6.0/runtimes/win/lib/netcoreapp2.0/System.Diagnostics.PerformanceCounter.dll
-/home/acancar/Documents/AngularCourse/skinet/API/bin/Debug/net6.0/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll
 /home/acancar/Documents/AngularCourse/skinet/API/bin/Debug/net6.0/Microsoft.AspNetCore.Cryptography.Internal.dll
 /home/acancar/Documents/AngularCourse/skinet/API/bin/Debug/net6.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 /home/acancar/Documents/AngularCourse/skinet/API/bin/Debug/net6.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
@@ -88,3 +87,15 @@
 /home/acancar/Documents/AngularCourse/skinet/API/bin/Debug/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
 /home/acancar/Documents/AngularCourse/skinet/API/bin/Debug/net6.0/Microsoft.IdentityModel.Protocols.dll
 /home/acancar/Documents/AngularCourse/skinet/API/bin/Debug/net6.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/home/acancar/Documents/AngularCourse/skinet/API/bin/Debug/net6.0/Microsoft.Win32.SystemEvents.dll
+/home/acancar/Documents/AngularCourse/skinet/API/bin/Debug/net6.0/Newtonsoft.Json.dll
+/home/acancar/Documents/AngularCourse/skinet/API/bin/Debug/net6.0/Stripe.net.dll
+/home/acancar/Documents/AngularCourse/skinet/API/bin/Debug/net6.0/System.Drawing.Common.dll
+/home/acancar/Documents/AngularCourse/skinet/API/bin/Debug/net6.0/System.Windows.Extensions.dll
+/home/acancar/Documents/AngularCourse/skinet/API/bin/Debug/net6.0/runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll
+/home/acancar/Documents/AngularCourse/skinet/API/bin/Debug/net6.0/runtimes/unix/lib/net6.0/System.Drawing.Common.dll
+/home/acancar/Documents/AngularCourse/skinet/API/bin/Debug/net6.0/runtimes/win/lib/net6.0/System.Drawing.Common.dll
+/home/acancar/Documents/AngularCourse/skinet/API/bin/Debug/net6.0/runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll
+/home/acancar/Documents/AngularCourse/skinet/API/bin/Debug/net6.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
+/home/acancar/Documents/AngularCourse/skinet/API/bin/Debug/net6.0/Npgsql.dll
+/home/acancar/Documents/AngularCourse/skinet/API/bin/Debug/net6.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll

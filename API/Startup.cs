@@ -9,6 +9,8 @@ using Microsoft.OpenApi.Models;
 using StackExchange.Redis;
 using API.Extensions;
 using Infrastructure.Identity;
+using Microsoft.Extensions.FileProviders;
+using Microsoft.AspNetCore.Builder;
 
 namespace API
 {
@@ -39,10 +41,10 @@ namespace API
                 });
             });
 
-            services.AddDbContext<StoreContext>(x => x.UseSqlite(_config.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<StoreContext>(x => x.UseNpgsql(_config.GetConnectionString("DefaultConnection")));
             services.AddDbContext<AppIdentitydbContext>(x =>
             {
-                x.UseSqlite(_config.GetConnectionString("IdentityConnection"));
+                x.UseNpgsql(_config.GetConnectionString("IdentityConnection"));
             });
 
             services.AddSingleton<IConnectionMultiplexer>(c =>
@@ -70,13 +72,18 @@ namespace API
 
             app.UseRouting();
             app.UseStaticFiles();
+            app.UseStaticFiles(new StaticFileOptions
+            {
+                FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "Content")),
+                RequestPath = "/Content"
+            });
 
             app.UseCors("CorsPolicy");
 
             app.UseAuthentication();
             app.UseAuthorization();
 
-            app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
+            app.UseEndpoints(endpoints => { endpoints.MapControllers(); endpoints.MapFallbackToController("Index", "Fallback"); });
         }
     }
 }

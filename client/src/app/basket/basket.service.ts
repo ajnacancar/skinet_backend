@@ -8,6 +8,7 @@ import {
   IBasketItem,
   IBasketTotals,
 } from '../shared/models/basket';
+import { DeliveryMethod } from '../shared/models/delivery-method';
 import { IProduct } from '../shared/models/product';
 
 @Injectable({
@@ -21,6 +22,29 @@ export class BasketService {
   basketTotak$ = this.basketTotalSource.asObservable();
 
   constructor(private http: HttpClient) {}
+
+  createPaymentIntent() {
+    return this.http
+      .post<Basket>(
+        this.baseUrl + 'payments/' + this.getCurrentBasketValue()?.id,
+        {}
+      )
+      .pipe(
+        map((basket) => {
+          this.basketSource.next(basket);
+        })
+      );
+  }
+
+  setShippingPrice(deliveryMethod: DeliveryMethod) {
+    const basket = this.getCurrentBasketValue();
+
+    if (basket) {
+      basket.shippingPrice = deliveryMethod.price;
+      basket.deliveryMethodId = deliveryMethod.id;
+      this.setBasket(basket);
+    }
+  }
 
   getBasket(id: string) {
     return this.http.get(this.baseUrl + 'basket?id=' + id).pipe(
@@ -72,7 +96,7 @@ export class BasketService {
     }
   }
 
-   removeItemFromBasket(item: IBasketItem) {
+  removeItemFromBasket(item: IBasketItem) {
     const basket = this.getCurrentBasketValue();
 
     if (basket.items.some((x) => x.id === item.id)) {
@@ -89,14 +113,18 @@ export class BasketService {
   deleteBasket(basket: IBasket) {
     return this.http.delete(this.baseUrl + 'basket?id=' + basket.id).subscribe({
       next: () => {
-        this.basketSource.next(null);
-        this.basketTotalSource.next(null);
-        localStorage.removeItem('basket_id');
+        this.deleteLocalBasket();
       },
       error: (error) => {
         console.log(error);
       },
     });
+  }
+
+  deleteLocalBasket(): void {
+    this.basketSource.next(null);
+    this.basketTotalSource.next(null);
+    localStorage.removeItem('basket_id');
   }
 
   decrementItemQuantity(item: IBasketItem) {
@@ -150,11 +178,14 @@ export class BasketService {
   private calculateTotals() {
     const basket = this.getCurrentBasketValue();
 
-    const shipping = 0;
     const subtotal = basket.items.reduce((a, b) => b.price * b.quantity + a, 0);
 
-    const total = subtotal + shipping;
+    const total = subtotal + basket.shippingPrice;
 
-    this.basketTotalSource.next({ shipping, subtotal, total });
+    this.basketTotalSource.next({
+      shipping: basket.shippingPrice,
+      subtotal,
+      total,
+    });
   }
 }
