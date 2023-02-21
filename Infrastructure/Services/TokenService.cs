@@ -24,10 +24,24 @@ namespace Infrastructure.Services
 
         public string CreateToken(AppUser user)
         {
-            var claims = new List<Claim>{
+            var claims = new List<Claim>();
+
+            if (user.isAdmin)
+            {
+                claims = new List<Claim>{
                 new Claim(ClaimTypes.Email, user.Email),
-                new Claim(ClaimTypes.GivenName, user.DisplayName)
+                new Claim(ClaimTypes.GivenName, user.DisplayName),
+                new Claim(ClaimTypes.Role, "Admin")
             };
+            }
+            else
+            {
+                claims = new List<Claim>{
+                new Claim(ClaimTypes.Email, user.Email),
+                new Claim(ClaimTypes.GivenName, user.DisplayName),
+                new Claim(ClaimTypes.Role, "User")
+            };
+            }
 
             var creds = new SigningCredentials(_key, SecurityAlgorithms.HmacSha512Signature);
 

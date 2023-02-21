@@ -1,9 +1,8 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AccountService } from './account/account.service';
+import { AdminService } from './admin/services/admin.service';
 import { BasketService } from './basket/basket.service';
-import { IPagination } from './shared/models/pagination';
-import { IProduct } from './shared/models/product';
 
 @Component({
   selector: 'app-root',
@@ -12,15 +11,23 @@ import { IProduct } from './shared/models/product';
 })
 export class AppComponent implements OnInit {
   title = 'skinet';
+  isAdminPage = false;
 
   constructor(
     private basketService: BasketService,
-    private accountService: AccountService
+    private accountService: AccountService,
+    private router: Router,
+    private adminService: AdminService
   ) {}
 
   ngOnInit(): void {
-    this.loadBasket();
-    this.loadCurrentUser();
+    if (window.location.href.includes('/admin')) {
+      this.isAdminPage = true;
+      this.loadCurrentAdminUser();
+    } else {
+      this.loadBasket();
+      this.loadCurrentUser();
+    }
   }
 
   loadBasket(): void {
@@ -44,6 +51,19 @@ export class AppComponent implements OnInit {
     this.accountService.loadCurrentUser(token).subscribe({
       next: () => {
         console.log('loaded user');
+      },
+      error: (error) => {
+        console.log(error);
+      },
+    });
+  }
+
+  loadCurrentAdminUser(): void {
+    const token = localStorage.getItem('token_admin');
+
+    this.adminService.loadCurrentAdminUser(token).subscribe({
+      next: () => {
+        console.log('loaded admin user');
       },
       error: (error) => {
         console.log(error);

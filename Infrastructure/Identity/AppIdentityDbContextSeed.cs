@@ -30,6 +30,26 @@ namespace Infrastructure.Identity
                 };
 
                 await userManager.CreateAsync(user, "Pa$$w0rd");
+
+
+                var userAdmin = new AppUser
+                {
+                    DisplayName = "Ajnna",
+                    Email = "ajna@size.ba",
+                    isAdmin = true,
+                    UserName = "ajna@size.ba",
+                    Address = new Address
+                    {
+                        FirstName = "Bob",
+                        LastName = "Bobbity",
+                        Street = "10 The Street",
+                        City = "New York",
+                        State = "NY",
+                        ZipCode = "90210"
+                    }
+                };
+
+                await userManager.CreateAsync(userAdmin, "Pa$$w0rd");
             }
         }
     }

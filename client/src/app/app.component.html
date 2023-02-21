@@ -10,7 +10,7 @@
 </ngx-spinner>
 
 <app-nav-bar></app-nav-bar>
-<app-sectio-header></app-sectio-header>
-<div >
+<app-sectio-header *ngIf="!isAdminPage"></app-sectio-header>
+<div>
   <router-outlet></router-outlet>
 </div>

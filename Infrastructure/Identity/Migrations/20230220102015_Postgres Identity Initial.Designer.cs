@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Infrastructure.Identity.Migrations
 {
     [DbContext(typeof(AppIdentitydbContext))]
-    [Migration("20230217084915_Postgres Identity Initial")]
+    [Migration("20230220102015_Postgres Identity Initial")]
     partial class PostgresIdentityInitial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -116,6 +116,9 @@ namespace Infrastructure.Identity.Migrations
                     b.Property<string>("UserName")
                         .HasMaxLength(256)
                         .HasColumnType("character varying(256)");
+
+                    b.Property<bool>("isAdmin")
+                        .HasColumnType("boolean");
 
                     b.HasKey("Id");
 

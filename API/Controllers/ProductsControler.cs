@@ -5,6 +5,7 @@ using AutoMapper;
 using Core.Entities;
 using Core.Interfaces;
 using Core.Specifications;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 namespace API.Controllers
 {
@@ -14,6 +15,7 @@ namespace API.Controllers
         private readonly IGenericRepository<Product> _productsRepo;
         private readonly IGenericRepository<ProductBrand> _productBrandRepo;
         private readonly IGenericRepository<ProductType> _productTypeRepo;
+        private readonly IProductService _productService;
         private readonly IMapper _mapper;
 
         public ProductsController
@@ -21,10 +23,12 @@ namespace API.Controllers
             IGenericRepository<Product> productsRepo,
             IGenericRepository<ProductBrand> productBrandRepo,
             IGenericRepository<ProductType> productTypeRepo,
+            IProductService productService,
             IMapper mapper
         )
         {
             _productTypeRepo = productTypeRepo;
+            _productService = productService;
             _productBrandRepo = productBrandRepo;
             _productsRepo = productsRepo;
             _mapper = mapper;
@@ -78,6 +82,111 @@ namespace API.Controllers
             var productTypes = await _productTypeRepo.ListAllAsync();
 
             return Ok(productTypes);
+        }
+
+        [Authorize(Roles = "Admin")]
+        [HttpPost("admin/brands")]
+        public async Task<ActionResult<ProductBrand>> AddProductBrand(ProductBrandDto productBrandDto)
+        {
+            var productBrand = await _productService.AddProductBrand(productBrandDto.Name);
+
+            if (productBrand == null) return BadRequest(new ApiResponse(400, "Problem adding product brand!"));
+
+            return Ok(productBrand);
+        }
+
+        [Authorize(Roles = "Admin")]
+        [HttpDelete("admin/brands/{id}")]
+        public async Task<ActionResult<ProductBrand>> DeleteProductBrand(int Id)
+        {
+            var productBrand = await _productBrandRepo.GetByIdAsync(Id);
+
+            if (productBrand == null) return NotFound(new ApiResponse(404));
+
+            var deletetedProductBrand = await _productService.DeleteProductBrand(productBrand);
+
+            return Ok(deletetedProductBrand);
+        }
+
+
+
+        [Authorize(Roles = "Admin")]
+        [HttpPost("admin/types")]
+        public async Task<ActionResult<ProductType>> AddProductType(ProductTypeDto productTypeDto)
+        {
+            var productType = await _productService.AddProductType(productTypeDto.Name);
+
+            if (productType == null) return BadRequest(new ApiResponse(400, "Problem adding product type!"));
+
+            return Ok(productType);
+        }
+
+
+        [Authorize(Roles = "Admin")]
+        [HttpDelete("admin/types/{id}")]
+        public async Task<ActionResult<ProductType>> DeleteProductType(int Id)
+        {
+            var productType = await _productTypeRepo.GetByIdAsync(Id);
+
+            if (productType == null) return NotFound(new ApiResponse(404));
+
+            var deletetedProductType = await _productService.DeleteProductType(productType);
+
+            return Ok(productType);
+        }
+
+
+        [Authorize(Roles = "Admin")]
+        [HttpPost]
+        public async Task<ActionResult<Product>> AddNewProduct(AddProductDto addProductDto)
+        {
+            var product = new Product(
+                addProductDto.Name,
+                addProductDto.Description,
+                addProductDto.Price,
+                addProductDto.PictureUrl,
+                addProductDto.ProductBrand,
+                addProductDto.ProductType);
+
+            var addedProduct = await _productService.AddNewProduct(product);
+
+            if (addedProduct == null) return NotFound(new ApiResponse(400, "Problem adding new product!"));
+
+            return Ok(product);
+        }
+
+        [Authorize(Roles = "Admin")]
+        [HttpDelete("{id}")]
+        public async Task<ActionResult<Product>> DeleteProduct(int Id)
+        {
+            var product = await _productsRepo.GetByIdAsync(Id);
+
+            if (product == null) return NotFound(new ApiResponse(404));
+
+            var deletedProduct = await _productService.DeleteProduct(product);
+
+            return Ok(product);
+        }
+
+
+        [Authorize(Roles = "Admin")]
+        [HttpPut]
+        public async Task<ActionResult<Product>> UpdateProduct(UpdateProductDto updateProductDto)
+        {
+            var product = await _productsRepo.GetByIdAsync(updateProductDto.Id);
+
+            if (product == null) return NotFound(new ApiResponse(404));
+
+            product.Name = updateProductDto.Name;
+            product.Description = updateProductDto.Description;
+            product.Price = updateProductDto.Price;
+            product.PictureUrl = updateProductDto.PictureUrl;
+            product.ProductBrandId = updateProductDto.ProductBrand;
+            product.ProductTypeId = updateProductDto.ProductType;
+
+            var updatedProduct = await _productService.UpdateProduct(product);
+
+            return updatedProduct;
         }
     }
 }

@@ -74,6 +74,7 @@ export class AccountService {
     this.router.navigateByUrl('/');
   }
 
+
   checkIfEmailExists(email: string) {
     return this.http.get(this.baseUrl + 'account/email-exists?email=' + email);
   }

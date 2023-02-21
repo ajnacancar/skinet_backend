@@ -2,6 +2,23 @@ namespace Core.Entities
 {
     public class Product : BaseEntity
     {
+        public Product(
+        string name,
+        string description,
+        decimal price,
+        string pictureUrl,
+        int productTypeId,
+        int productBrandId
+        )
+        {
+            Name = name;
+            Description = description;
+            Price = price;
+            PictureUrl = pictureUrl;
+            ProductBrandId = productBrandId;
+            ProductTypeId = productTypeId;
+        }
+
         public string Name { get; set; }
         public string Description { get; set; }
         public decimal Price { get; set; }
