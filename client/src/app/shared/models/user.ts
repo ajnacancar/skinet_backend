@@ -1,6 +1,6 @@
 export interface IUser {
   email: string;
   displayName: string;
-  isAdmin: boolean;
+  roles: string[];
   token: string;
 }

@@ -1,8 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Claims;
-using System.Threading.Tasks;
 using API.Dtos;
 using API.Errors;
 using API.Extensions;
@@ -39,7 +34,7 @@ namespace API.Controllers
             return new UserDto
             {
                 Email = user.Email,
-                Token = _tokenService.CreateToken(user),
+                Token = await _tokenService.CreateToken(user),
                 DisplayName = user.DisplayName
             };
         }
@@ -89,9 +84,8 @@ namespace API.Controllers
             return new UserDto
             {
                 Email = user.Email,
-                Token = _tokenService.CreateToken(user),
+                Token = await _tokenService.CreateToken(user),
                 DisplayName = user.DisplayName,
-                isAdmin = user.isAdmin
 
             };
         }
@@ -116,12 +110,15 @@ namespace API.Controllers
 
             if (!result.Succeeded) return BadRequest(new ApiResponse(400));
 
+            var roleResult = await _userManager.AddToRoleAsync(user, "User");
+
+            if (!roleResult.Succeeded) return BadRequest(result.Errors);
+
             return new UserDto
             {
                 Email = user.Email,
-                Token = _tokenService.CreateToken(user),
+                Token = await _tokenService.CreateToken(user),
                 DisplayName = user.DisplayName,
-                isAdmin = user.isAdmin
             };
         }
 
@@ -130,7 +127,9 @@ namespace API.Controllers
         {
             var user = await _userManager.FindByEmailAsync(loginDto.Email);
 
-            if (user == null || !user.isAdmin) return Unauthorized(new ApiResponse(401));
+            var roles = await _userManager.GetRolesAsync(user);
+
+            if (user == null || roles.Count != 2) return Unauthorized(new ApiResponse(401));
 
             var result = await _signInManager.CheckPasswordSignInAsync(user, loginDto.Password, false);
 
@@ -139,9 +138,8 @@ namespace API.Controllers
             return new UserDto
             {
                 Email = user.Email,
-                Token = _tokenService.CreateToken(user),
+                Token = await _tokenService.CreateToken(user),
                 DisplayName = user.DisplayName,
-                 isAdmin = user.isAdmin
             };
         }
     }

@@ -1,0 +1,15 @@
+<div class="container" style="margin-top: 150px">
+    <app-order-table [orders]="orders" redirectUrl="/admin/orders" ></app-order-table>
+
+  <div
+    class="d-flex justify-content-center"
+    *ngIf="totalCount && totalCount > 0"
+  >
+    <app-pager
+      [pageNumber]="shopParamsBase.pageNumber"
+      [totalCount]="totalCount"
+      [pageSize]="shopParamsBase.pageSize"
+      (pageChanged)="onPageChanged($event)"
+    ></app-pager>
+  </div>
+</div>

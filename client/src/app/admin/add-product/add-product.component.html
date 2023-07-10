@@ -1,0 +1,76 @@
+<div class="container" style="margin-top: 150px; max-width: 600px">
+  <div class="row">
+    <div *ngIf="brands && types" class="col-md-12">
+      <h4 class="mb-3">Add New Product</h4>
+      <form [formGroup]="addNewProductForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+          <div class="col-md-6">
+            <app-text-input
+              type="text"
+              [formControl]="addNewProductForm.controls['name']"
+              label="Name"
+            ></app-text-input>
+          </div>
+          <div class="col-md-6">
+            <app-text-input
+              type="number"
+              [formControl]="addNewProductForm.controls['price']"
+              label="Price"
+            ></app-text-input>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <app-text-input
+            type="text"
+            [formControl]="addNewProductForm.controls['description']"
+            label="Description"
+          ></app-text-input>
+        </div>
+
+        <div class="mb-3">
+          <input type="file" class="file-upload" (change)="onFileSelected($event)">
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="productBrand">Product Brand</label>
+            <select
+              formControlName="productBrand"
+              class="custom-select d-block w-100"
+              id="productBrand"
+              required=""
+            >
+              <option value="">Choose...</option>
+              <option *ngFor="let item of brands" [value]="item.id">
+                {{ item.name }}
+              </option>
+            </select>
+            <div class="invalid-feedback">
+              Please select a valid product brand.
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="productType">Product type</label>
+            <select
+              formControlName="productType"
+              class="custom-select d-block w-100"
+              id="productType"
+              required=""
+            >
+              <option value="">Choose...</option>
+              <option *ngFor="let item of types" [value]="item.id">
+                {{ item.name }}
+              </option>
+            </select>
+            <div class="invalid-feedback">Please provide a valid type.</div>
+          </div>
+        </div>
+
+        <button class="btn btn-primary btn-lg btn-block" type="submit">
+          Save product
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

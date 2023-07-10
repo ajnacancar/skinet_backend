@@ -35,7 +35,7 @@ namespace API.Controllers
 
         }
 
-        [Cached(600)]
+        // [Cached(600)]
         [HttpGet]
         public async Task<ActionResult<Pagination<ProductToReturnDto>>> GetProducts([FromQuery] ProductSpecParams productParams)
         {
@@ -137,14 +137,22 @@ namespace API.Controllers
 
 
         [Authorize(Roles = "Admin")]
-        [HttpPost]
-        public async Task<ActionResult<Product>> AddNewProduct(AddProductDto addProductDto)
+        [HttpPost("admin")]
+        public async Task<ActionResult<Product>> AddNewProduct([FromForm] AddProductDto addProductDto)
         {
+
+            string path = Path.Combine("C:/Users/acancar/Desktop/Projects/skinet_backend/API/Content/images/products", addProductDto.ImageName);
+
+            using (Stream stream = new FileStream(path, FileMode.Create))
+            {
+                addProductDto.Image.CopyTo(stream);
+            }
+
             var product = new Product(
                 addProductDto.Name,
                 addProductDto.Description,
                 addProductDto.Price,
-                addProductDto.PictureUrl,
+               "images/products/" + addProductDto.ImageName,
                 addProductDto.ProductBrand,
                 addProductDto.ProductType);
 
@@ -156,10 +164,17 @@ namespace API.Controllers
         }
 
         [Authorize(Roles = "Admin")]
-        [HttpDelete("{id}")]
+        [HttpDelete("admin/{id}")]
         public async Task<ActionResult<Product>> DeleteProduct(int Id)
         {
             var product = await _productsRepo.GetByIdAsync(Id);
+
+            string path = Path.Combine("C:/Users/acancar/Desktop/Projects/skinet_backend/API/Content/", product.PictureUrl);
+            FileInfo file = new FileInfo(path);
+            if (file.Exists)
+            {
+                file.Delete();
+            }
 
             if (product == null) return NotFound(new ApiResponse(404));
 
@@ -170,7 +185,7 @@ namespace API.Controllers
 
 
         [Authorize(Roles = "Admin")]
-        [HttpPut]
+        [HttpPut("admin")]
         public async Task<ActionResult<Product>> UpdateProduct(UpdateProductDto updateProductDto)
         {
             var product = await _productsRepo.GetByIdAsync(updateProductDto.Id);
@@ -180,7 +195,7 @@ namespace API.Controllers
             product.Name = updateProductDto.Name;
             product.Description = updateProductDto.Description;
             product.Price = updateProductDto.Price;
-            product.PictureUrl = updateProductDto.PictureUrl;
+            product.PictureUrl = "images/products" + updateProductDto.ImageName;
             product.ProductBrandId = updateProductDto.ProductBrand;
             product.ProductTypeId = updateProductDto.ProductType;
 

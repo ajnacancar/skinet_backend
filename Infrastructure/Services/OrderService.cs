@@ -79,7 +79,12 @@ namespace Infrastructure.Services
         public async Task<Order> GetOrderByIdAsync(int id, string buyerEmail)
         {
             var spec = new OrderWithItemsAndOrderingSpecification(id, buyerEmail);
+            return await _unitOfWork.Repository<Order>().GetEntityWithSpec(spec);
+        }
 
+        public async Task<Order> GetOrderByIdAsyncForAdmin(int id)
+        {
+            var spec = new OrderWithItemsAndOrderingSpecification(id);
             return await _unitOfWork.Repository<Order>().GetEntityWithSpec(spec);
         }
 

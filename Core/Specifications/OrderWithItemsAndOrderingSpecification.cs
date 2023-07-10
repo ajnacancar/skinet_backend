@@ -21,5 +21,18 @@ namespace Core.Specifications
             AddInclude(o => o.OrderItems);
             AddInclude(o => o.DeliveryMethod);
         }
+
+         public OrderWithItemsAndOrderingSpecification(int id) : base(o => o.Id == id)
+        {
+            AddInclude(o => o.OrderItems);
+            AddInclude(o => o.DeliveryMethod);
+        }
+
+        public OrderWithItemsAndOrderingSpecification(SpecParams specParams) : base()
+        {
+            AddInclude(o => o.OrderItems);
+            AddInclude(o => o.DeliveryMethod);
+             ApplyPaging(specParams.PageSize * (specParams.PageIndex - 1), specParams.PageSize);
+        }
     }
 }

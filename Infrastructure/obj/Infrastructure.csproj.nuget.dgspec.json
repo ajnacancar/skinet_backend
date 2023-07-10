@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/acancar/Documents/AngularCourse/skinet/Infrastructure/Infrastructure.csproj": {}
+    "C:\\Users\\acancar\\Desktop\\Projects\\skinet_backend\\Infrastructure\\Infrastructure.csproj": {}
   },
   "projects": {
-    "/home/acancar/Documents/AngularCourse/skinet/Core/Core.csproj": {
+    "C:\\Users\\acancar\\Desktop\\Projects\\skinet_backend\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/acancar/Documents/AngularCourse/skinet/Core/Core.csproj",
+        "projectUniqueName": "C:\\Users\\acancar\\Desktop\\Projects\\skinet_backend\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "/home/acancar/Documents/AngularCourse/skinet/Core/Core.csproj",
-        "packagesPath": "/home/acancar/.nuget/packages/",
-        "outputPath": "/home/acancar/Documents/AngularCourse/skinet/Core/obj/",
+        "projectPath": "C:\\Users\\acancar\\Desktop\\Projects\\skinet_backend\\Core\\Core.csproj",
+        "packagesPath": "C:\\Users\\acancar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\acancar\\Desktop\\Projects\\skinet_backend\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/acancar/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\acancar\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -40,7 +40,7 @@
           "dependencies": {
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[6.0.13, )"
+              "version": "[6.0.15, )"
             }
           },
           "imports": [
@@ -59,21 +59,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.405/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.407\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/acancar/Documents/AngularCourse/skinet/Infrastructure/Infrastructure.csproj": {
+    "C:\\Users\\acancar\\Desktop\\Projects\\skinet_backend\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/acancar/Documents/AngularCourse/skinet/Infrastructure/Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\acancar\\Desktop\\Projects\\skinet_backend\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "/home/acancar/Documents/AngularCourse/skinet/Infrastructure/Infrastructure.csproj",
-        "packagesPath": "/home/acancar/.nuget/packages/",
-        "outputPath": "/home/acancar/Documents/AngularCourse/skinet/Infrastructure/obj/",
+        "projectPath": "C:\\Users\\acancar\\Desktop\\Projects\\skinet_backend\\Infrastructure\\Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\acancar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\acancar\\Desktop\\Projects\\skinet_backend\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/acancar/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\acancar\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -85,8 +85,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/home/acancar/Documents/AngularCourse/skinet/Core/Core.csproj": {
-                "projectPath": "/home/acancar/Documents/AngularCourse/skinet/Core/Core.csproj"
+              "C:\\Users\\acancar\\Desktop\\Projects\\skinet_backend\\Core\\Core.csproj": {
+                "projectPath": "C:\\Users\\acancar\\Desktop\\Projects\\skinet_backend\\Core\\Core.csproj"
               }
             }
           }
@@ -107,7 +107,7 @@
             },
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
-              "version": "[6.0.13, )"
+              "version": "[6.0.15, )"
             },
             "Microsoft.IdentityModel.Tokens": {
               "target": "Package",
@@ -146,7 +146,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.405/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.407\\RuntimeIdentifierGraph.json"
         }
       }
     }

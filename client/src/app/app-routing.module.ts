@@ -5,6 +5,7 @@ import { NotFoundComponent } from './core/not-found/not-found.component';
 import { ServerErrorComponent } from './core/server-error/server-error.component';
 import { TestErrorComponent } from './core/test-error/test-error.component';
 import { HomeComponent } from './home/home.component';
+import { AuthAdminGuard } from './core/guards/auth-admin.guard';
 
 const routes: Routes = [
   {
@@ -63,6 +64,7 @@ const routes: Routes = [
     path: 'admin',
     loadChildren: () =>
       import('./admin/admin.module').then((mod) => mod.AdminModule),
+    
   },
   {
     path: '**',

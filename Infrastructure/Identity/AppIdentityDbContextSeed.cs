@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Core.Entities;
 using Core.Entities.Identity;
 using Microsoft.AspNetCore.Identity;
 
@@ -9,10 +10,26 @@ namespace Infrastructure.Identity
 {
     public class AppIdentityDbContextSeed
     {
-        public static async Task SeedUserAsync(UserManager<AppUser> userManager)
+        public static async Task SeedUserAsync(UserManager<AppUser> userManager, RoleManager<AppRole> roleManager)
         {
-            if (!userManager.Users.Any())
+            if (!roleManager.Roles.Any())
             {
+                var roles = new List<AppRole>{
+                new AppRole{Id="test", Name = "User"},
+                new AppRole{Id="test1", Name = "Admin"},
+            };
+
+
+                foreach (var role in roles)
+                {
+                    await roleManager.CreateAsync(role);
+                }
+            }
+
+
+
+            // if (!userManager.Users.Any())
+            // {
                 var user = new AppUser
                 {
                     DisplayName = "Bob",
@@ -30,13 +47,12 @@ namespace Infrastructure.Identity
                 };
 
                 await userManager.CreateAsync(user, "Pa$$w0rd");
-
+                await userManager.AddToRoleAsync(user, "User");
 
                 var userAdmin = new AppUser
                 {
                     DisplayName = "Ajnna",
                     Email = "ajna@size.ba",
-                    isAdmin = true,
                     UserName = "ajna@size.ba",
                     Address = new Address
                     {
@@ -50,7 +66,8 @@ namespace Infrastructure.Identity
                 };
 
                 await userManager.CreateAsync(userAdmin, "Pa$$w0rd");
-            }
+                await userManager.AddToRolesAsync(userAdmin, new[] { "Admin", "User" });
+            // }
         }
     }
 }

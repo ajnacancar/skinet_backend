@@ -1,0 +1,90 @@
+<div
+  style="margin-top: 150px"
+  class="d-flex justify-content-center align-items-center"
+>
+  <div class="container">
+    <a routerLink="/admin/add-new-product" class="btn btn-primary mb-2">Add New Product</a>
+    <div class="row" *ngIf="products">
+      <div class="col-12">
+        <div>
+          <div class="table-responsive">
+            <table class="table">
+              <thead class="border-0 py-2">
+                <tr>
+                  <th scope="col">
+                    <div class="p-2 px-3 text-uppercase">Product</div>
+                  </th>
+                  <th scope="col">
+                    <div class="py-2 text-uppercase">Price</div>
+                  </th>
+                  <th scope="col" class="border-0">
+                    <div class="py-2 text-uppercase">Remove</div>
+                  </th>
+                </tr>
+              </thead>
+
+
+              <tbody>
+                <tr *ngFor="let item of products">
+                  <td scope="row">
+                    <div class="p-2">
+                      <img
+                        src="{{ item.pictureUrl }}"
+                        alt="{{ item.name }}"
+                        class="img-fluid"
+                        style="max-height: 50px"
+                      />
+                      <div class="ml-3 d-inline-block align-middle">
+                        <h5 class="mb-0">
+                          <p
+                            class="text-dark"
+                            > {{ item.name }} </p
+                          >
+                        </h5>
+                        <span
+                          *ngIf="item.productType"
+                          class="text-muted font-weight-normal font-italic d-block"
+                          > Type: {{ item.productType }} </span
+                        >
+                        <span
+                        *ngIf="item.productBrand"
+                        class="text-muted font-weight-normal font-italic d-block"
+                        > Brand: {{ item.productBrand }} </span
+                      >
+                      </div>
+                    </div>
+                  </td>
+                  <td class="align-middle">
+                    <strong>{{ item.price | currency }}</strong>
+                  </td>
+                
+                  <td class="align-middle">
+                    <a (click)="deleteProduct(item.id)" class="text-danger">
+                      <i
+                        class="fa fa-trash"
+                        style="font-size: 2em; cursor: pointer"
+                      ></i>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div
+    class="d-flex justify-content-center"
+    *ngIf="totalCount && totalCount > 0"
+  >
+    <app-pager
+    [pageNumber]="shopParams.pageNumber"
+      [totalCount]="totalCount"
+      [pageSize]="shopParams.pageSize"
+      (pageChanged)="onPageChanged($event)"
+    ></app-pager>
+  </div>
+  </div>
+</div>

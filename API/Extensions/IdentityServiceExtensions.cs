@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Core.Entities;
 using Core.Entities.Identity;
 using Infrastructure.Identity;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -18,6 +19,8 @@ namespace API.Extensions
             var builder = services.AddIdentityCore<AppUser>();
 
             builder = new IdentityBuilder(builder.UserType, builder.Services);
+            builder.AddRoles<AppRole>();
+            builder.AddRoleManager<RoleManager<AppRole>>();
             builder.AddEntityFrameworkStores<AppIdentitydbContext>();
 
             builder.AddSignInManager<SignInManager<AppUser>>();

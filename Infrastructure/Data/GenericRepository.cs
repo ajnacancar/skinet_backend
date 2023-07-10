@@ -57,5 +57,10 @@ namespace Infrastructure.Data
         {
             _context.Set<T>().Remove(entity);
         }
+
+        public async Task<int> CountAsync()
+        {
+            return await _context.Set<T>().CountAsync();
+        }
     }
 }

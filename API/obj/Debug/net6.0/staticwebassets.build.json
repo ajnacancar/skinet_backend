@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "CxOFWXfXOh4uy2OVY46MAXh5X30U16vPBJnTrzoRNsc=",
+  "Hash": "7wTUkoxtU5PvkU7POBYIvksSy0WqYFM04xY6w/3S6po=",
   "Source": "API",
   "BasePath": "_content/API",
   "Mode": "Default",
@@ -8,19 +8,19 @@
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [
     {
-      "Name": "API/wwwroot",
+      "Name": "API\\wwwroot",
       "Source": "API",
-      "ContentRoot": "/home/acancar/Documents/AngularCourse/skinet/API/wwwroot/",
+      "ContentRoot": "C:\\Users\\acancar\\Desktop\\Projects\\skinet_backend\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "/home/acancar/Documents/AngularCourse/skinet/API/wwwroot/207.f6851507a3755b56.js",
+      "Identity": "C:\\Users\\acancar\\Desktop\\Projects\\skinet_backend\\API\\wwwroot\\207.f6851507a3755b56.js",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/acancar/Documents/AngularCourse/skinet/API/wwwroot/",
+      "ContentRoot": "C:\\Users\\acancar\\Desktop\\Projects\\skinet_backend\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "207.f6851507a3755b56.js",
       "AssetKind": "All",
@@ -31,13 +31,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/207.f6851507a3755b56.js"
+      "OriginalItemSpec": "wwwroot\\207.f6851507a3755b56.js"
     },
     {
-      "Identity": "/home/acancar/Documents/AngularCourse/skinet/API/wwwroot/210.64477f646ecf0369.js",
+      "Identity": "C:\\Users\\acancar\\Desktop\\Projects\\skinet_backend\\API\\wwwroot\\210.64477f646ecf0369.js",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/acancar/Documents/AngularCourse/skinet/API/wwwroot/",
+      "ContentRoot": "C:\\Users\\acancar\\Desktop\\Projects\\skinet_backend\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "210.64477f646ecf0369.js",
       "AssetKind": "All",
@@ -48,13 +48,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/210.64477f646ecf0369.js"
+      "OriginalItemSpec": "wwwroot\\210.64477f646ecf0369.js"
     },
     {
-      "Identity": "/home/acancar/Documents/AngularCourse/skinet/API/wwwroot/3rdpartylicenses.txt",
+      "Identity": "C:\\Users\\acancar\\Desktop\\Projects\\skinet_backend\\API\\wwwroot\\3rdpartylicenses.txt",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/acancar/Documents/AngularCourse/skinet/API/wwwroot/",
+      "ContentRoot": "C:\\Users\\acancar\\Desktop\\Projects\\skinet_backend\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "3rdpartylicenses.txt",
       "AssetKind": "All",
@@ -65,13 +65,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/3rdpartylicenses.txt"
+      "OriginalItemSpec": "wwwroot\\3rdpartylicenses.txt"
     },
     {
-      "Identity": "/home/acancar/Documents/AngularCourse/skinet/API/wwwroot/481.e04df34ad92b4fbb.js",
+      "Identity": "C:\\Users\\acancar\\Desktop\\Projects\\skinet_backend\\API\\wwwroot\\481.e04df34ad92b4fbb.js",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/acancar/Documents/AngularCourse/skinet/API/wwwroot/",
+      "ContentRoot": "C:\\Users\\acancar\\Desktop\\Projects\\skinet_backend\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "481.e04df34ad92b4fbb.js",
       "AssetKind": "All",
@@ -82,13 +82,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/481.e04df34ad92b4fbb.js"
+      "OriginalItemSpec": "wwwroot\\481.e04df34ad92b4fbb.js"
     },
     {
-      "Identity": "/home/acancar/Documents/AngularCourse/skinet/API/wwwroot/776.9198ca899adf78f0.js",
+      "Identity": "C:\\Users\\acancar\\Desktop\\Projects\\skinet_backend\\API\\wwwroot\\776.9198ca899adf78f0.js",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/acancar/Documents/AngularCourse/skinet/API/wwwroot/",
+      "ContentRoot": "C:\\Users\\acancar\\Desktop\\Projects\\skinet_backend\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "776.9198ca899adf78f0.js",
       "AssetKind": "All",
@@ -99,13 +99,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/776.9198ca899adf78f0.js"
+      "OriginalItemSpec": "wwwroot\\776.9198ca899adf78f0.js"
     },
     {
-      "Identity": "/home/acancar/Documents/AngularCourse/skinet/API/wwwroot/920.1d0adf522363254c.js",
+      "Identity": "C:\\Users\\acancar\\Desktop\\Projects\\skinet_backend\\API\\wwwroot\\920.1d0adf522363254c.js",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/acancar/Documents/AngularCourse/skinet/API/wwwroot/",
+      "ContentRoot": "C:\\Users\\acancar\\Desktop\\Projects\\skinet_backend\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "920.1d0adf522363254c.js",
       "AssetKind": "All",
@@ -116,13 +116,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/920.1d0adf522363254c.js"
+      "OriginalItemSpec": "wwwroot\\920.1d0adf522363254c.js"
     },
     {
-      "Identity": "/home/acancar/Documents/AngularCourse/skinet/API/wwwroot/assets/images/hero1.jpg",
+      "Identity": "C:\\Users\\acancar\\Desktop\\Projects\\skinet_backend\\API\\wwwroot\\assets\\images\\hero1.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/acancar/Documents/AngularCourse/skinet/API/wwwroot/",
+      "ContentRoot": "C:\\Users\\acancar\\Desktop\\Projects\\skinet_backend\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/images/hero1.jpg",
       "AssetKind": "All",
@@ -133,13 +133,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/assets/images/hero1.jpg"
+      "OriginalItemSpec": "wwwroot\\assets\\images\\hero1.jpg"
     },
     {
-      "Identity": "/home/acancar/Documents/AngularCourse/skinet/API/wwwroot/assets/images/hero2.jpg",
+      "Identity": "C:\\Users\\acancar\\Desktop\\Projects\\skinet_backend\\API\\wwwroot\\assets\\images\\hero2.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/acancar/Documents/AngularCourse/skinet/API/wwwroot/",
+      "ContentRoot": "C:\\Users\\acancar\\Desktop\\Projects\\skinet_backend\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/images/hero2.jpg",
       "AssetKind": "All",
@@ -150,13 +150,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/assets/images/hero2.jpg"
+      "OriginalItemSpec": "wwwroot\\assets\\images\\hero2.jpg"
     },
     {
-      "Identity": "/home/acancar/Documents/AngularCourse/skinet/API/wwwroot/assets/images/hero3.jpg",
+      "Identity": "C:\\Users\\acancar\\Desktop\\Projects\\skinet_backend\\API\\wwwroot\\assets\\images\\hero3.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/acancar/Documents/AngularCourse/skinet/API/wwwroot/",
+      "ContentRoot": "C:\\Users\\acancar\\Desktop\\Projects\\skinet_backend\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/images/hero3.jpg",
       "AssetKind": "All",
@@ -167,13 +167,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/assets/images/hero3.jpg"
+      "OriginalItemSpec": "wwwroot\\assets\\images\\hero3.jpg"
     },
     {
-      "Identity": "/home/acancar/Documents/AngularCourse/skinet/API/wwwroot/assets/images/logo.png",
+      "Identity": "C:\\Users\\acancar\\Desktop\\Projects\\skinet_backend\\API\\wwwroot\\assets\\images\\logo.png",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/acancar/Documents/AngularCourse/skinet/API/wwwroot/",
+      "ContentRoot": "C:\\Users\\acancar\\Desktop\\Projects\\skinet_backend\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/images/logo.png",
       "AssetKind": "All",
@@ -184,13 +184,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/assets/images/logo.png"
+      "OriginalItemSpec": "wwwroot\\assets\\images\\logo.png"
     },
     {
-      "Identity": "/home/acancar/Documents/AngularCourse/skinet/API/wwwroot/assets/images/placeholder.png",
+      "Identity": "C:\\Users\\acancar\\Desktop\\Projects\\skinet_backend\\API\\wwwroot\\assets\\images\\placeholder.png",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/acancar/Documents/AngularCourse/skinet/API/wwwroot/",
+      "ContentRoot": "C:\\Users\\acancar\\Desktop\\Projects\\skinet_backend\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/images/placeholder.png",
       "AssetKind": "All",
@@ -201,13 +201,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/assets/images/placeholder.png"
+      "OriginalItemSpec": "wwwroot\\assets\\images\\placeholder.png"
     },
     {
-      "Identity": "/home/acancar/Documents/AngularCourse/skinet/API/wwwroot/common.92718881158b57a5.js",
+      "Identity": "C:\\Users\\acancar\\Desktop\\Projects\\skinet_backend\\API\\wwwroot\\common.92718881158b57a5.js",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/acancar/Documents/AngularCourse/skinet/API/wwwroot/",
+      "ContentRoot": "C:\\Users\\acancar\\Desktop\\Projects\\skinet_backend\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "common.92718881158b57a5.js",
       "AssetKind": "All",
@@ -218,13 +218,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/common.92718881158b57a5.js"
+      "OriginalItemSpec": "wwwroot\\common.92718881158b57a5.js"
     },
     {
-      "Identity": "/home/acancar/Documents/AngularCourse/skinet/API/wwwroot/favicon.ico",
+      "Identity": "C:\\Users\\acancar\\Desktop\\Projects\\skinet_backend\\API\\wwwroot\\favicon.ico",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/acancar/Documents/AngularCourse/skinet/API/wwwroot/",
+      "ContentRoot": "C:\\Users\\acancar\\Desktop\\Projects\\skinet_backend\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -235,13 +235,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/favicon.ico"
+      "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "/home/acancar/Documents/AngularCourse/skinet/API/wwwroot/fontawesome-webfont.2b13baa7dd4f54c9.eot",
+      "Identity": "C:\\Users\\acancar\\Desktop\\Projects\\skinet_backend\\API\\wwwroot\\fontawesome-webfont.2b13baa7dd4f54c9.eot",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/acancar/Documents/AngularCourse/skinet/API/wwwroot/",
+      "ContentRoot": "C:\\Users\\acancar\\Desktop\\Projects\\skinet_backend\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "fontawesome-webfont.2b13baa7dd4f54c9.eot",
       "AssetKind": "All",
@@ -252,13 +252,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/fontawesome-webfont.2b13baa7dd4f54c9.eot"
+      "OriginalItemSpec": "wwwroot\\fontawesome-webfont.2b13baa7dd4f54c9.eot"
     },
     {
-      "Identity": "/home/acancar/Documents/AngularCourse/skinet/API/wwwroot/fontawesome-webfont.8a7cb27d142e3e19.ttf",
+      "Identity": "C:\\Users\\acancar\\Desktop\\Projects\\skinet_backend\\API\\wwwroot\\fontawesome-webfont.8a7cb27d142e3e19.ttf",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/acancar/Documents/AngularCourse/skinet/API/wwwroot/",
+      "ContentRoot": "C:\\Users\\acancar\\Desktop\\Projects\\skinet_backend\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "fontawesome-webfont.8a7cb27d142e3e19.ttf",
       "AssetKind": "All",
@@ -269,13 +269,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/fontawesome-webfont.8a7cb27d142e3e19.ttf"
+      "OriginalItemSpec": "wwwroot\\fontawesome-webfont.8a7cb27d142e3e19.ttf"
     },
     {
-      "Identity": "/home/acancar/Documents/AngularCourse/skinet/API/wwwroot/fontawesome-webfont.cf011583fb81df9f.woff",
+      "Identity": "C:\\Users\\acancar\\Desktop\\Projects\\skinet_backend\\API\\wwwroot\\fontawesome-webfont.cf011583fb81df9f.woff",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/acancar/Documents/AngularCourse/skinet/API/wwwroot/",
+      "ContentRoot": "C:\\Users\\acancar\\Desktop\\Projects\\skinet_backend\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "fontawesome-webfont.cf011583fb81df9f.woff",
       "AssetKind": "All",
@@ -286,13 +286,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/fontawesome-webfont.cf011583fb81df9f.woff"
+      "OriginalItemSpec": "wwwroot\\fontawesome-webfont.cf011583fb81df9f.woff"
     },
     {
-      "Identity": "/home/acancar/Documents/AngularCourse/skinet/API/wwwroot/fontawesome-webfont.da909aa098b0ee2d.svg",
+      "Identity": "C:\\Users\\acancar\\Desktop\\Projects\\skinet_backend\\API\\wwwroot\\fontawesome-webfont.da909aa098b0ee2d.svg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/acancar/Documents/AngularCourse/skinet/API/wwwroot/",
+      "ContentRoot": "C:\\Users\\acancar\\Desktop\\Projects\\skinet_backend\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "fontawesome-webfont.da909aa098b0ee2d.svg",
       "AssetKind": "All",
@@ -303,13 +303,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/fontawesome-webfont.da909aa098b0ee2d.svg"
+      "OriginalItemSpec": "wwwroot\\fontawesome-webfont.da909aa098b0ee2d.svg"
     },
     {
-      "Identity": "/home/acancar/Documents/AngularCourse/skinet/API/wwwroot/fontawesome-webfont.e9955780856cf8aa.woff2",
+      "Identity": "C:\\Users\\acancar\\Desktop\\Projects\\skinet_backend\\API\\wwwroot\\fontawesome-webfont.e9955780856cf8aa.woff2",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/acancar/Documents/AngularCourse/skinet/API/wwwroot/",
+      "ContentRoot": "C:\\Users\\acancar\\Desktop\\Projects\\skinet_backend\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "fontawesome-webfont.e9955780856cf8aa.woff2",
       "AssetKind": "All",
@@ -320,13 +320,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/fontawesome-webfont.e9955780856cf8aa.woff2"
+      "OriginalItemSpec": "wwwroot\\fontawesome-webfont.e9955780856cf8aa.woff2"
     },
     {
-      "Identity": "/home/acancar/Documents/AngularCourse/skinet/API/wwwroot/index.html",
+      "Identity": "C:\\Users\\acancar\\Desktop\\Projects\\skinet_backend\\API\\wwwroot\\index.html",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/acancar/Documents/AngularCourse/skinet/API/wwwroot/",
+      "ContentRoot": "C:\\Users\\acancar\\Desktop\\Projects\\skinet_backend\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "index.html",
       "AssetKind": "All",
@@ -337,13 +337,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/index.html"
+      "OriginalItemSpec": "wwwroot\\index.html"
     },
     {
-      "Identity": "/home/acancar/Documents/AngularCourse/skinet/API/wwwroot/main.c488ed1a031ab976.js",
+      "Identity": "C:\\Users\\acancar\\Desktop\\Projects\\skinet_backend\\API\\wwwroot\\main.c488ed1a031ab976.js",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/acancar/Documents/AngularCourse/skinet/API/wwwroot/",
+      "ContentRoot": "C:\\Users\\acancar\\Desktop\\Projects\\skinet_backend\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "main.c488ed1a031ab976.js",
       "AssetKind": "All",
@@ -354,13 +354,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/main.c488ed1a031ab976.js"
+      "OriginalItemSpec": "wwwroot\\main.c488ed1a031ab976.js"
     },
     {
-      "Identity": "/home/acancar/Documents/AngularCourse/skinet/API/wwwroot/polyfills.78b5eb3e9a921dab.js",
+      "Identity": "C:\\Users\\acancar\\Desktop\\Projects\\skinet_backend\\API\\wwwroot\\polyfills.78b5eb3e9a921dab.js",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/acancar/Documents/AngularCourse/skinet/API/wwwroot/",
+      "ContentRoot": "C:\\Users\\acancar\\Desktop\\Projects\\skinet_backend\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "polyfills.78b5eb3e9a921dab.js",
       "AssetKind": "All",
@@ -371,13 +371,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/polyfills.78b5eb3e9a921dab.js"
+      "OriginalItemSpec": "wwwroot\\polyfills.78b5eb3e9a921dab.js"
     },
     {
-      "Identity": "/home/acancar/Documents/AngularCourse/skinet/API/wwwroot/runtime.dc5f2989a183a716.js",
+      "Identity": "C:\\Users\\acancar\\Desktop\\Projects\\skinet_backend\\API\\wwwroot\\runtime.dc5f2989a183a716.js",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/acancar/Documents/AngularCourse/skinet/API/wwwroot/",
+      "ContentRoot": "C:\\Users\\acancar\\Desktop\\Projects\\skinet_backend\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "runtime.dc5f2989a183a716.js",
       "AssetKind": "All",
@@ -388,13 +388,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/runtime.dc5f2989a183a716.js"
+      "OriginalItemSpec": "wwwroot\\runtime.dc5f2989a183a716.js"
     },
     {
-      "Identity": "/home/acancar/Documents/AngularCourse/skinet/API/wwwroot/styles.a98192350eaa6315.css",
+      "Identity": "C:\\Users\\acancar\\Desktop\\Projects\\skinet_backend\\API\\wwwroot\\styles.a98192350eaa6315.css",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/acancar/Documents/AngularCourse/skinet/API/wwwroot/",
+      "ContentRoot": "C:\\Users\\acancar\\Desktop\\Projects\\skinet_backend\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "styles.a98192350eaa6315.css",
       "AssetKind": "All",
@@ -405,7 +405,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/styles.a98192350eaa6315.css"
+      "OriginalItemSpec": "wwwroot\\styles.a98192350eaa6315.css"
     }
   ]
 }

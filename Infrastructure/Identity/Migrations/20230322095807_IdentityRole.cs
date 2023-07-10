@@ -6,7 +6,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace Infrastructure.Identity.Migrations
 {
-    public partial class PostgresIdentityInitial : Migration
+    public partial class IdentityRole : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -30,7 +30,6 @@ namespace Infrastructure.Identity.Migrations
                 {
                     Id = table.Column<string>(type: "text", nullable: false),
                     DisplayName = table.Column<string>(type: "text", nullable: true),
-                    isAdmin = table.Column<bool>(type: "boolean", nullable: false),
                     UserName = table.Column<string>(type: "character varying(256)", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(type: "character varying(256)", maxLength: 256, nullable: true),
                     Email = table.Column<string>(type: "character varying(256)", maxLength: 256, nullable: true),

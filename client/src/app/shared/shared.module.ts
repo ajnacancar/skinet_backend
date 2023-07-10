@@ -12,6 +12,9 @@ import { StepperComponent } from './components/stepper/stepper.component';
 import { CdkStepperModule } from '@angular/cdk/stepper';
 import { BasketSummaryComponent } from './basket-summary/basket-summary.component';
 import { RouterLink } from '@angular/router';
+import { HasRoleDirective } from './directives/has-role.directive';
+import { OrderDetailsSharedComponent } from './components/order-details-shared/order-details-shared.component';
+import { OrderTableComponent } from './components/order-table/order-table.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +24,9 @@ import { RouterLink } from '@angular/router';
     TextInputComponent,
     StepperComponent,
     BasketSummaryComponent,
+    HasRoleDirective,
+    OrderDetailsSharedComponent,
+    OrderTableComponent,
   ],
   imports: [
     CommonModule,
@@ -44,7 +50,9 @@ import { RouterLink } from '@angular/router';
     StepperComponent,
     CdkStepperModule,
     BasketSummaryComponent,
-    FormsModule
+    FormsModule,
+    OrderDetailsSharedComponent,
+    OrderTableComponent
   ],
 })
 export class SharedModule {}
